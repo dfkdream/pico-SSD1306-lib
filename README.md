@@ -1,13 +1,6 @@
-# pico-sdk-nixos-template
+# pico-SSD1306-lib
 
-Raspberry pi pico development environment template for NixOS
-
----
-
-# How to Use
-```sh
-nix develop
-```
+SSD1306 library for Raspberry Pi Pico
 
 # Reference
-* [pico-sdk is missing tinyusb submodule](https://github.com/NixOS/nixpkgs/issues/175297)
+* [pico-examples](https://github.com/raspberrypi/pico-examples/tree/master/i2c/ssd1306_i2c)
