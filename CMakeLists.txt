@@ -6,15 +6,17 @@ project(pico-sdk-template C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
+set(PICO_BOARD waveshare_rp2040_zero)
+
 if (PICO_SDK_VERSION_STRING VERSION_LESS "1.3.0")
     message(FATAL_ERROR "Raspberry Pi Pico SDK version 1.3.0 (or later) required. Your version is ${PICO_SDK_VERSION_STRING}")
 endif()
 
 pico_sdk_init()
 
-add_executable(main main.c)
+add_executable(main main.c ssd1306.c)
 
-target_link_libraries(main pico_stdlib)
+target_link_libraries(main pico_stdlib hardware_i2c)
 
 pico_enable_stdio_usb(main 1)
 
